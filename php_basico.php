@@ -1,20 +1,46 @@
 <?php
 /*
-? Tipos de datos en php:
+? Operadores en php:
 
-? En PHP, hay diferentes tipos de datos para almacenar información:
+?En PHP, los operadores son símbolos especiales que se utilizan para realizar operaciones en variables y valores. A contunuación están todos los operadores utilizados en php:
 
-    *-Enteros (int): Almacenan números enteros sin decimales.
-    *-Punto flotante (float): Almacenan números con decimales.
-    *-Booleanos (bool): Almacenan valores verdaderos o falsos.
-    *-Arreglos (array): Almacenan una colección de datos de diferentes tipos.
-    *-Cadenas de texto (string): Almacenan texto y caracteres.
-    *-Objetos (object): Almacenan instancias de clases, que son definiciones de objetos.
-    *-Recursos (resource): Almacenan referencias a recursos externos, como conexiones a bases de datos o archivos abiertos.
-    *-Nulos (null): Representan variables sin valor o sin definir.
-    *-Además de estos tipos básicos, PHP también admite constantes y tipos de datos compuestos, como estructuras de datos y clases.
+!Operadores aritméticos:
 
-*Es esencial seleccionar el tipo de dato adecuado según la información que se desea almacenar y manipular, puedes usar la función especial var_dump() para imprimir el tipo de dato y el contenido de una variable.
+*Suma (+): realiza la suma de dos valores.
+*Ejemplo: $resultado = 2 + 3; // $resultado tendrá el valor 5
+*Resta (-): realiza la resta de dos valores.
+*Ejemplo: $resultado = 5 - 2; // $resultado tendrá el valor 3
+*Multiplicación (*): realiza la multiplicación de dos valores.
+*Ejemplo: $resultado = 2 * 3; // $resultado tendrá el valor 6
+*División (/): realiza la división de dos valores.
+*Ejemplo: $resultado = 6 / 2; // $resultado tendrá el valor 3
+*Módulo (%): devuelve el resto de la división entera de dos valores.
+*Ejemplo: $resultado = 7 % 3; // $resultado tendrá el valor 1
+
+! Operadores de asignación:
+
+*Asignación (=): asigna un valor a una variable.
+*Ejemplo: $numero = 10; // la variable $numero tendrá el valor 10
+*Operadores compuestos: combinan una operación aritmética y una asignación.
+*Ejemplo: $numero += 5; // incrementa el valor de $numero en 5
+
+! Operadores de comparación:
+
+*Igualdad (==): compara si dos valores son iguales.
+*Ejemplo: if ($a == $b) { // código a ejecutar }
+*Identidad (===): compara si dos valores son iguales y tienen el mismo tipo de dato.
+*Ejemplo: if ($a === $b) { // código a ejecutar }
+*Mayor que (>), menor que (<), mayor o igual que (>=), menor o igual que (<=): compara si un valor es mayor, menor, mayor o igual, o menor o igual a otro valor.
+*Ejemplo: if ($a > $b) { // código a ejecutar }
+
+! Operadores lógicos:
+
+*Y lógico (&& o and): evalúa si se cumplen dos condiciones.
+*Ejemplo: if ($a > 0 && $a < 10) { // código a ejecutar }
+*O lógico (|| o or): evalúa si se cumple al menos una de las dos condiciones.
+*Ejemplo: if ($a > 0 || $b > 0) { // código a ejecutar }
+*Negación lógica (!): invierte el valor de una condición.
+*Ejemplo: if (!$condicion) { // código a ejecutar }
 
 
 */
