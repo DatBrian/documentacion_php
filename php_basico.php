@@ -1,33 +1,29 @@
 <?php
 /*
-? Arreglos, Arreglos asociativos y funciones para arreglos:
+? isset() y empty():
 
-?En PHP, hay diferentes tipos de arreglos pero todos son estructuras para el almacenamiento de datos
+? En PHP, las funciones isset() y empty() se utilizan para verificar el estado de una variable
 */
-//! Arreglos
-//*Los arreglos en PHP son estructuras de datos que permiten almacenar múltiples valores en una sola variable. Los elementos de un arreglo se pueden acceder mediante un índice numérico que representa su posición como se muestra en le siguiente ejemplo:
 
-$frutas = array("manzana", "naranja", "plátano");
-echo $frutas[0];
+//* isset(): Esta función verifica si una variable está definida y tiene un valor asignado. Devuelve true si la variable existe y tiene un valor, y false si la variable no está definida o tiene un valor nulo como se muestra en el siguiente ejemplo:
 
-//! Arreglos asociativos
-//*Los arreglos asociativos son una variante de los arreglos en PHP en los que los elementos se acceden mediante claves en lugar de índices numéricos. Cada elemento del arreglo asociativo está compuesto por una clave y un valor asociado como se muestra en el siguiente ejemplo:
+$nombre = "Juan";
 
-$edades = array("Juan" => 25, "María" => 30, "Pedro" => 35);
-echo $edades["María"];
+if (isset($nombre)) {
+    echo "La variable \$nombre está definida y tiene un valor.";
+} else {
+    echo "La variable \$nombre no está definida o no tiene un valor.";
+}
 
-/*
-! Funciones para arreglos:
+//* empty(): Esta función verifica si una variable está vacía. Devuelve true si la variable está vacía, es decir, si no tiene valor asignado, o si su valor se evalúa como falso (por ejemplo, una cadena vacía, el número 0 o el valor booleano false). Devuelve false si la variable tiene algún valor asignado y se evalúa como verdadero como se muestra en el siguiente ejemplo:
 
-? PHP proporciona varias funciones para trabajar con arreglos y algunas de las funciones mas comunes son:
+$edad = 0;
 
-*count(): Devuelve la cantidad de elementos en un arreglo.
-*array_push(): Agrega uno o más elementos al final de un arreglo.
-*array_pop(): Elimina y devuelve el último elemento de un arreglo.
-*array_merge(): Combina dos o más arreglos en uno nuevo.
-*array_keys(): Devuelve un arreglo con todas las claves de un arreglo asociativo.
-*array_values(): Devuelve un arreglo con todos los valores de un arreglo asociativo.
+if (empty($edad)) {
+    echo "La variable \$edad está vacía o se evalúa como falso.";
+} else {
+    echo "La variable \$edad tiene un valor asignado y se evalúa como verdadero.";
+}
 
-*/
 
 ?>
