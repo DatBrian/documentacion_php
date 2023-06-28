@@ -1,47 +1,32 @@
 <?php
 /*
-? Operadores en php:
+? Arreglos, Arreglos asociativos y funciones para arreglos:
 
-?En PHP, los operadores son símbolos especiales que se utilizan para realizar operaciones en variables y valores. A contunuación están todos los operadores utilizados en php:
+?En PHP, hay diferentes tipos de arreglos pero todos son estructuras para el almacenamiento de datos
+*/
+//! Arreglos
+//*Los arreglos en PHP son estructuras de datos que permiten almacenar múltiples valores en una sola variable. Los elementos de un arreglo se pueden acceder mediante un índice numérico que representa su posición como se muestra en le siguiente ejemplo:
 
-!Operadores aritméticos:
+$frutas = array("manzana", "naranja", "plátano");
+echo $frutas[0];
 
-*Suma (+): realiza la suma de dos valores.
-*Ejemplo: $resultado = 2 + 3; // $resultado tendrá el valor 5
-*Resta (-): realiza la resta de dos valores.
-*Ejemplo: $resultado = 5 - 2; // $resultado tendrá el valor 3
-*Multiplicación (*): realiza la multiplicación de dos valores.
-*Ejemplo: $resultado = 2 * 3; // $resultado tendrá el valor 6
-*División (/): realiza la división de dos valores.
-*Ejemplo: $resultado = 6 / 2; // $resultado tendrá el valor 3
-*Módulo (%): devuelve el resto de la división entera de dos valores.
-*Ejemplo: $resultado = 7 % 3; // $resultado tendrá el valor 1
+//! Arreglos asociativos
+//*Los arreglos asociativos son una variante de los arreglos en PHP en los que los elementos se acceden mediante claves en lugar de índices numéricos. Cada elemento del arreglo asociativo está compuesto por una clave y un valor asociado como se muestra en el siguiente ejemplo:
 
-! Operadores de asignación:
+$edades = array("Juan" => 25, "María" => 30, "Pedro" => 35);
+echo $edades["María"];
 
-*Asignación (=): asigna un valor a una variable.
-*Ejemplo: $numero = 10; // la variable $numero tendrá el valor 10
-*Operadores compuestos: combinan una operación aritmética y una asignación.
-*Ejemplo: $numero += 5; // incrementa el valor de $numero en 5
+/*
+! Funciones para arreglos:
 
-! Operadores de comparación:
+? PHP proporciona varias funciones para trabajar con arreglos y algunas de las funciones mas comunes son:
 
-*Igualdad (==): compara si dos valores son iguales.
-*Ejemplo: if ($a == $b) { // código a ejecutar }
-*Identidad (===): compara si dos valores son iguales y tienen el mismo tipo de dato.
-*Ejemplo: if ($a === $b) { // código a ejecutar }
-*Mayor que (>), menor que (<), mayor o igual que (>=), menor o igual que (<=): compara si un valor es mayor, menor, mayor o igual, o menor o igual a otro valor.
-*Ejemplo: if ($a > $b) { // código a ejecutar }
-
-! Operadores lógicos:
-
-*Y lógico (&& o and): evalúa si se cumplen dos condiciones.
-*Ejemplo: if ($a > 0 && $a < 10) { // código a ejecutar }
-*O lógico (|| o or): evalúa si se cumple al menos una de las dos condiciones.
-*Ejemplo: if ($a > 0 || $b > 0) { // código a ejecutar }
-*Negación lógica (!): invierte el valor de una condición.
-*Ejemplo: if (!$condicion) { // código a ejecutar }
-
+*count(): Devuelve la cantidad de elementos en un arreglo.
+*array_push(): Agrega uno o más elementos al final de un arreglo.
+*array_pop(): Elimina y devuelve el último elemento de un arreglo.
+*array_merge(): Combina dos o más arreglos en uno nuevo.
+*array_keys(): Devuelve un arreglo con todas las claves de un arreglo asociativo.
+*array_values(): Devuelve un arreglo con todos los valores de un arreglo asociativo.
 
 */
 
