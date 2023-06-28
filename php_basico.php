@@ -1,29 +1,13 @@
 <?php
 /*
-? Funciones de salida en php:
-
-*En PHP, las funciones de salida se utilizan para mostrar información al usuario en la salida estándar del servidor web. Las tres funciones más comunes para imprimir en PHP son echo(), print(), y sprintf().
-
+? Variables y constantes en php:
 */
+//*En php, las variables se definen con un símbolo $ para indicar el nombre de la variable seguido del operador de asignación = y su valor, aqui un ejemplo de como declarar una variable en php:
 
-//*La primera es echo() y se utiliza para mostrar una o varias cadenas de texto en la salida del servidor web. Puede imprimir múltiples valores separados por comas como se muestra en el siguiente ejemplo:
+$nombre = "Brian";
 
-$nombre = "Juan";
-$edad = 25;
-echo "Hola, soy " . $nombre . " y tengo " . $edad . " años.";
+//*Las constantes en php como en otros lenguajes son espacios de memoria que no van a cambiar su valor, a contunuación un ejemplo de declaración de constantes en php:
 
-//*La segunda es print() y es similar a echo() pero solo puede imprimir una cadena de texto a la vez. No se pueden separar los valores con comas y aqui esta el ejemplo:
-
-$mensaje = "¡Hola mundo!";
-print($mensaje);
-
-//*Por último esta printf() que a diferencia de echo() y print(), sprintf() no imprime directamente en la salida estándar, sino que devuelve la cadena formateada como resultado. Puedes usar marcadores de formato para incrustar valores en la cadena y aqui se muestra el ejemplo:
-
-$precio = 10.5;
-$cantidad = 2;
-$total = $precio * $cantidad;
-
-$mensaje = sprintf("El total es: $%.2f", $total);
-echo $mensaje;
+define("apellido", "Melo");
 
 ?>
