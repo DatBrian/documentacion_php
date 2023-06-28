@@ -1,13 +1,29 @@
+<?php
 /*
-? Introducción a php:
+? Funciones de salida en php:
 
-*PHP es un lenguaje de programación de código abierto y del lado del servidor que se puede incrustar en documentos HTML. Es muy popular en el desarrollo web y ofrece una curva de aprendizaje rápida, lo que facilita la creación de aplicaciones orientadas al servidor.
-*Una de las ventajas de programar con PHP es su versatilidad, ya que puede implementarse en diferentes entornos de ejecución. Para desarrollar aplicaciones con PHP, se requiere contar con una herramienta que proporcione soporte para la ejecución a través de un servidor local.
-*Algunas de las herramientas comunes para configurar un entorno de desarrollo con PHP en Windows son:
-    -XAMPP
-    -WampServer
-    -Laragon
-*Cada herramienta tiene su propio proceso de instalación y configuración para configurar el servidor apache y mysql pero todas se utilizan para la configuración del entorno de desarrollo para PHP.
-*Una vez que hayas configurado el entorno de desarrollo con PHP en Windows o Linux, podrás comenzar a desarrollar aplicaciones utilizando PHP. PHP tiene una estructura básica de script, que incluye etiquetas de apertura y cierre del script. Puedes escribir la lógica y programación dentro del cuerpo del script.
+*En PHP, las funciones de salida se utilizan para mostrar información al usuario en la salida estándar del servidor web. Las tres funciones más comunes para imprimir en PHP son echo(), print(), y sprintf().
 
 */
+
+//*La primera es echo() y se utiliza para mostrar una o varias cadenas de texto en la salida del servidor web. Puede imprimir múltiples valores separados por comas como se muestra en el siguiente ejemplo:
+
+$nombre = "Juan";
+$edad = 25;
+echo "Hola, soy " . $nombre . " y tengo " . $edad . " años.";
+
+//*La segunda es print() y es similar a echo() pero solo puede imprimir una cadena de texto a la vez. No se pueden separar los valores con comas y aqui esta el ejemplo:
+
+$mensaje = "¡Hola mundo!";
+print($mensaje);
+
+//*Por último esta printf() que a diferencia de echo() y print(), sprintf() no imprime directamente en la salida estándar, sino que devuelve la cadena formateada como resultado. Puedes usar marcadores de formato para incrustar valores en la cadena y aqui se muestra el ejemplo:
+
+$precio = 10.5;
+$cantidad = 2;
+$total = $precio * $cantidad;
+
+$mensaje = sprintf("El total es: $%.2f", $total);
+echo $mensaje;
+
+?>
