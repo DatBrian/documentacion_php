@@ -1,47 +1,30 @@
 <?php
 /*
-? Estructuras condicionales en php:
+? Funciones definidas por el usuario:
 
-? En PHP, las estructuras de control son utilizadas para controlar el flujo de ejecución de un programa. Estas estructuras permiten tomar decisiones, repetir bloques de código y realizar acciones condicionales.
+? Las funciones definidas por el usuario en programación son bloques de código que se pueden llamar y ejecutar en cualquier parte del programa para realizar una tarea específica. Estas funciones hacen que el código sea modular y reutilizable, lo que facilita la programación y el mantenimiento, hay dos tipos de funciones generales en el lenguaje, las que no retornan algun valor y las que si lo hacecen; a continuación se muestran.
 */
 
-// ! Estructura if-else:
-//* La estructura if-else se utiliza para tomar decisiones basadas en una condición. Si la condición es verdadera, se ejecuta un bloque de código; de lo contrario, se ejecuta otro bloque de código como se muestra en el siguiente ejemplo:
-
-$edad = 20;
-
-if ($edad >= 18) {
-    echo "Eres mayor de edad.";
-} else {
-    echo "Eres menor de edad.";
+// ! Funciones que no retornan valor (void):
+//* En este caso la función saludar va a ejecutar un código específico pero no devolverá ningún valor
+function saludar($nombre)
+{
+    echo "Hola, " . $nombre . "!";
 }
 
-//! Estructura switch-case
-//*La estructura switch-case se utiliza para realizar acciones diferentes según el valor de una expresión. Se compara la expresión con diferentes casos y se ejecuta el bloque de código correspondiente al caso que coincida como se muestra en el siguiente ejemplo:
+saludar("Juan");
 
-$opcion = 2;
 
-switch ($opcion) {
-    case 1:
-        echo "Seleccionaste la opción 1.";
-        break;
-    case 2:
-        echo "Seleccionaste la opción 2.";
-        break;
-    case 3:
-        echo "Seleccionaste la opción 3.";
-        break;
-    default:
-        echo "Opción inválida.";
-        break;
+// ! Funciones que retornan algún valor::
+//* En el caso de esta función ejecuta una suma pero a su vez retorna el resultado por lo que podremos almacenarlo en una variable
+
+function sumar($num1, $num2)
+{
+    return $num1 + $num2;
 }
 
-//! Estructura for
-//*La estructura for se utiliza para repetir un bloque de código un número específico de veces. Se compone de una inicialización, una condición y una expresión de incremento como se muestra en el siguiente ejemplo:
-
-for ($i = 1; $i <= 5; $i++) {
-    echo "El valor de i es: " . $i . "<br>";
-}
+$resultado = sumar(5, 3);
+echo "El resultado es: " . $resultado;
 
 
 ?>
