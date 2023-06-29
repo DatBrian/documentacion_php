@@ -1,30 +1,22 @@
 <?php
 /*
-? Funciones definidas por el usuario:
+? include, require, include_once, require_once:
 
-? Las funciones definidas por el usuario en programación son bloques de código que se pueden llamar y ejecutar en cualquier parte del programa para realizar una tarea específica. Estas funciones hacen que el código sea modular y reutilizable, lo que facilita la programación y el mantenimiento, hay dos tipos de funciones generales en el lenguaje, las que no retornan algun valor y las que si lo hacecen; a continuación se muestran.
+? Las funciones include, require, include_once, require_once se utilizan para incluir archivos externos, aunque todas cumplen esta función cada una tiene sus diferencias las cuales se exponen a continuación.
 */
 
-// ! Funciones que no retornan valor (void):
-//* En este caso la función saludar va a ejecutar un código específico pero no devolverá ningún valor
-function saludar($nombre)
-{
-    echo "Hola, " . $nombre . "!";
-}
+// ! include y include_once:
+//* Ambas funciones sirven para incluir un archivo, include lo traerá todas las veces que sea mientras que include_once solo lo utilizará una vez.
 
-saludar("Juan");
+include "archivo.php";
 
+include_once "archivo.php";
 
-// ! Funciones que retornan algún valor::
-//* En el caso de esta función ejecuta una suma pero a su vez retorna el resultado por lo que podremos almacenarlo en una variable
+// ! require y require_once:
+//* Ambas funciones sirven para incluir una archivo externo en el proyecto, de la misma forma require lo traerá todas las veces que sean necesarias mientras que require_once solo lo utilizará una vez; la diferencia entre require y include es que al utilizar require si el archivo no existe se detendrá la ejecución del programa.
 
-function sumar($num1, $num2)
-{
-    return $num1 + $num2;
-}
+require "archivo.php";
 
-$resultado = sumar(5, 3);
-echo "El resultado es: " . $resultado;
-
+require_once "archivo.php";
 
 ?>
