@@ -1,22 +1,32 @@
 <?php
 /*
-? include, require, include_once, require_once:
+? json_encode y json_decode:
 
-? Las funciones include, require, include_once, require_once se utilizan para incluir archivos externos, aunque todas cumplen esta función cada una tiene sus diferencias las cuales se exponen a continuación.
+? Estas funciones sirven tanto para convertir en json como viceversa.
 */
 
-// ! include y include_once:
-//* Ambas funciones sirven para incluir un archivo, include lo traerá todas las veces que sea mientras que include_once solo lo utilizará una vez.
+// ! json_encode:
+//* Sirve para convertir datos de PHP a formato JSON como se ve en el siguiente ejemplo.
 
-include "archivo.php";
+$data = array(
+    'name' => 'John Doe',
+    'age' => 30,
+    'city' => 'New York'
+);
 
-include_once "archivo.php";
+$jsonString = json_encode($data);
+echo $jsonString;
 
-// ! require y require_once:
-//* Ambas funciones sirven para incluir una archivo externo en el proyecto, de la misma forma require lo traerá todas las veces que sean necesarias mientras que require_once solo lo utilizará una vez; la diferencia entre require y include es que al utilizar require si el archivo no existe se detendrá la ejecución del programa.
 
-require "archivo.php";
+// ! json_decode:
+//* Al contario de json_encode esta funcion sirve para convertir datos en formato JSON en datos de PHP como se muestra en el siguiente ejemplo.
 
-require_once "archivo.php";
+$jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
+
+$data = json_decode($jsonString);
+echo $data->name;
+echo $data->age;
+echo $data->city;
+
 
 ?>
